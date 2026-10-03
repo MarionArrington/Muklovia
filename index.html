@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    :root {
+        --zlata-nadpis: #EED202; 
+    }
 
+    /* Celkové pozadie stránky a farba textu */
+    body {
+        background-color: #23120c;
+        color: #d8b37e;
+        font-size: 14px;
+        font-family: inherit;
+    }
+
+    .akcia-kategoria {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 5px 8px;
+        margin: 2px 0;
+        text-align: left;
+        width: 100%;
+        display: block;
+        font-family: inherit;
+        font-size: 14px;
+        color: var(--zlata-nadpis);
+        transition: all 0.2s ease;
+    }
+    
+    /* Výraznejšie žlté podfarbenie pri prejdení myšou */
+    .akcia-kategoria:hover {
+        background-color: rgba(238, 210, 2, 0.4);
+    }
+
+    .obsah-kategorie {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        color: #d8b37e;
+    }
+</style>
+</head>
+<body>
+
+<!-- Zvuk písacieho stroja priamo z vášho GitHubu -->
+<audio id="muklovsky-zvuk" preload="auto">
+    <source src="https://raw.githubusercontent.com/MarionArrington/Muklovia/main/380137__yottasounds__typewriter-single-key-type-2.wav" type="audio/wav">
+</audio>
+
+<center><img src="https://i.ibb.co/pPYLRCJ/sm.png" width="73%"></center>
+<p style="text-align: justify">Predmet zaoberajúci sa <font color="#EED202">muklovským svetom, životom muklov bez použitia mágie.</font> Študentom poskytuje bližší pohľad na <font color="#EED202">muklovské vynálezy, vedu a techniku.</font> Aj keď sa to tak na prvý pohľad nemusí zdať, ide o pomerne komplikovanú vedu, osobitne pre čistokrvných študentov vyrastajúcich v čisto kúzelníckom prostredí. Okrem štúdia života muklov sa predmet venuje aj <font color="#EED202">vzájomnému prepojeniu čarodejníckeho a muklovského sveta.</font></p><br>
+
+<center><img src="https://i.ibb.co/7xn5VxyK/Bez-n-zvu.jpg" alt="Učebnica muklovských vynálezov" width="90%"></center><br>
+
+<p style="text-align: justify"><font color="#EED202"><u><b><big>Rozdelenie spoločnosti podľa miery kúzelníckej krvi</big></b></u></font><br><br>
+
+Ľudí delíme podľa toho, v akej miere sa v ich rodovej histórii vyskytujú osoby s kúzelníckymi schopnosťami a naopak bez nich. Rozlišujeme nasledujúce kategórie:</p>
+
+<script>
+    function otvor(el) {
+        var audio = document.getElementById("muklovsky-zvuk");
+        audio.currentTime = 0; // Vráti zvuk na začiatok, ak sa klikne rýchlejšie za sebou
+        audio.play().catch(e => console.log("Prehratie zlyhalo:", e));
+
+        var c = el.nextElementSibling;
+        if (c.style.maxHeight) {
+            c.style.maxHeight = null;
+        } else {
+            c.style.maxHeight = c.scrollHeight + "px";
+        }
+    }
+</script>
+
+<button class="akcia-kategoria" onclick="otvor(this)"><font color="#EED202"><i>• Čistokrvní -</i></font></button>
+<div class="obsah-kategorie"><p style="text-align: justify">označenie pre čarodejnícke rodiny, ktoré deklarujú, že sa v ich rodokmeni nevyskytujú žiadni predkovia, ktorí by boli akokoľvek spojení s nečistou krvou. Počet čistokrvných čarodejníkov sa však v priebehu dejín postupne znižoval, a preto niektoré čistokrvné rodiny s cieľom zachovať si svoju čistú rodovú líniu, praktizovali príbuzenské sobáše, čo viedlo k zvýšenému výskytu mentálnej nestability niektorých potomkov. Viacero čistokrvných čarodejníckych rodín však svoju „čistokrvnosť“ dosiahlo jednoduchým odstránením nečistokrvných jedincov z rodokmeňa a predstieraním, že nikdy neexistovali. V súčasnosti sa za čistokrvného považuje čarodejník, ktorého obaja rodičia i starí rodičia pochádzajú z čistokrvných čarodejníckych rodín.</p></div>
+
+<button class="akcia-kategoria" onclick="otvor(this)"><font color="#EED202"><i>• Zmiešaní -</i></font></button>
+<div class="obsah-kategorie"><p style="text-align: justify">najpočetnejšia skupina čarodejníkov súčasnosti. Ide o osoby, v ktorých rodinách sa vyskytujú čarodejníci i muklovia.</p></div>
+
+<button class="akcia-kategoria" onclick="otvor(this)"><font color="#EED202"><i>• Čarodejníci muklovského pôvodu -</i></font></button>
+<div class="obsah-kategorie"><p style="text-align: justify">dieťa, ktorého rodičia i starí rodičia sú muklovia. Čistokrvnými častokrát označovaný hanlivým pomenovaním muklovský šmejd. Napriek svojmu pôvodu disponujú plnohodnotnými kúzelníckymi schopnosťami.</p></div>
+
+<button class="akcia-kategoria" onclick="otvor(this)"><font color="#EED202"><i>• Moták -</i></font></button>
+<div class="obsah-kategorie"><p style="text-align: justify">človek, ktorého aspoň jeden rodič má magické nadanie, zatiaľ čo on sám ním obdarený nebol. Motáci vidia kúzlom skryté budovy, sú schopní používať niektoré čarodejnícke zariadenia, no nedokážu mágiu ovládať. Z toho dôvodu sú väčšinou posielaní do muklovských škôl a povzbudzovaní, aby sa integrovali do muklovskej spoločnosti, keďže v čarodejníckom prostredí často čelia sociálnemu vylúčeniu.</p></div>
+
+<button class="akcia-kategoria" onclick="otvor(this)"><font color="#EED202"><i>• Mukel -</i></font></button>
+<div class="obsah-kategorie"><p style="text-align: justify">človek bez magického nadania. On ani jeho rodina nevedia o existencii kúzelníckeho sveta.</p></div>
+
+<p>&nbsp;</p>
+
+<!-- NADPIS S IKONKOU A ZVÄČŠENÝM TEXTOM -->
+<p style="text-align: justify; line-height: 1.2; margin-top: 40px;">
+    <img src="https://i.ibb.co/K3cGXvK/Bez-n-zvu-removebg-preview.png" alt="Ikonka" style="height: 3.5em; width: auto; margin-right: 10px; vertical-align: middle;">
+    <font color="#EED202"><u><b><big>Salazarov syndróm čistokrvnosti</big></b></u></font>
+</p>
+<!-- -------------------------------------------- -->
+
+<p style="text-align: justify">Pojem, ktorý sme si spomínali už na jednej z predchádzajúcich hodín, pri zmienke o vzniku Bradavickej školy. Označuje ideologický postoj, ktorý odkazuje na názory<font color="#EED202"> Salazara Zmijozela,</font> zakladateľa Zmijozelskej koleje. Zmijozel zastával presvedčenie, že <font color="#EED202">kúzelnícke vzdelanie by malo byť poskytované výhradne čistokrvným čarodejníkom.</font> Aj v súčasnosti sa nájdu stúpenci tejto idey považujúci čistokrvných za nadradených ostatným. V extrémnych prípadoch môže tzv. Salazarov syndróm prerásť až do stavu čistého šialenstva, kedy človek nie je schopný komunikovať s ostatnými normálnym spôsobom, je panovačný a schopný dopustiť sa násilia či vraždy v záujme zachovania čistokrvnosti svojho rodu.</p>
+
+<p style="text-align: right"><img src="https://i.ibb.co/tPtxVkk/pppp.png" width="13%"></p>
+
+</body>
+</html>
